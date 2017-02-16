@@ -1,13 +1,13 @@
 $(function(){
   $("#heightButton").click(function() {
     var height = parseInt(prompt("Enter your height in inches"));
-    $(".ride").hide();
+    $(".ride").removeClass("highlightOn");
     if (height > 60) {
-      $(".tall").show();
+      $(".tall").addClass("highlightOn");
     } else if (height < 60) {
-      $(".short").show();
+      $(".short").addClass("highlightOn");
     } else {
-      $(".short, .tall").show();
+      $(".short, .tall").addClass("highlightOn");
     }
   });
 
